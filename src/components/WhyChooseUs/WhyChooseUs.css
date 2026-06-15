@@ -1,0 +1,27 @@
+.why {
+  text-align: center;
+}
+
+.why h2 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+
+.feature-card svg {
+  font-size: 3rem;
+  color: #d62828;
+  margin-bottom: 20px;
+}
