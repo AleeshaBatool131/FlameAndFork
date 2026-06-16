@@ -1,0 +1,44 @@
+.menu-card{
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,.1);
+  transition:.3s;
+}
+
+.menu-card:hover{
+  transform:translateY(-8px);
+}
+
+.menu-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.menu-content{
+  padding:20px;
+}
+
+.category{
+  background:#d62828;
+  color:white;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:.8rem;
+}
+
+.menu-content h3{
+  margin:15px 0 10px;
+}
+
+.menu-content p{
+  color:#666;
+  line-height:1.5;
+  margin-bottom:15px;
+}
+
+.menu-content h4{
+  color:#d62828;
+  font-size:1.2rem;
+}
