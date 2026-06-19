@@ -1,7 +1,11 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
 
@@ -18,15 +22,58 @@ function Navbar() {
         </div>
       </div>
 
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+      {/* Desktop & Mobile Navigation */}
+      <ul
+        className={
+          menuOpen
+            ? "nav-links active"
+            : "nav-links"
+        }
+      >
+        <li>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/menu" onClick={() => setMenuOpen(false)}>
+            Menu
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </Link>
+        </li>
+
+        {/* Mobile Reserve Button */}
+        <li className="mobile-reserve">
+          <button className="reserve-btn">
+            Reserve Table
+          </button>
+        </li>
       </ul>
-      <button className="reserve-btn">
+
+      {/* Desktop Button */}
+      <button className="reserve-btn desktop-btn">
         Reserve Table
       </button>
+
+      {/* Hamburger Icon */}
+      <div
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
 
     </nav>
   );
